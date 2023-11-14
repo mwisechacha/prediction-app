@@ -45,9 +45,9 @@ def predict():
     X = vectorizer.transform([preprocessed_text])
     y_pred = clf.predict(X)
     if y_pred[0]== 1:
-        result = 'real'
+        result = 'Real'
     else:
-        result = 'fake'
+        result = 'Fake'
     return render_template('results.html', result=result, text=text)
 
 if __name__ == '__main__':
